@@ -5,41 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glow Beauty - Online Do'kon</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
+    <div class="top-bar">Bepul yetkazib berish — 200,000 so'mdan yuqori xaridlar uchun!</div>
     <header>
         <nav class="navbar">
-            <div class="logo">Glow Beauty</div>
+            <div class="logo">Glow <span>Beauty</span></div>
             <ul class="nav-links">
                 <li><a href="#home">Asosiy</a></li>
-                <li><a href="#products">Mahsulotlar</a></li>
-                <li><a href="#about">Biz haqimizda</a></li>
+                <li><a href="#products">Katalog</a></li>
+                <li><a href="#reviews">Fikrlar</a></li>
             </ul>
             <div class="nav-icons">
                 <div class="cart-icon" id="cartBtn">
-                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-shopping-bag"></i>
                     <span id="cartCount">0</span>
                 </div>
-                <a href="register.html" class="user-icon"><i class="fas fa-user"></i></a>
+                <a href="register.html" class="user-icon"><i class="far fa-user"></i></a>
             </div>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-content">
-                <h2>Go'zalligingizni biz bilan toping</h2>
-                <p>Eng sifatli va tabiiy kosmetika mahsulotlari faqat bizda.</p>
-                <a href="#products" class="btn-primary">Sotib olish</a>
+            <div class="hero-content animate__animated animate__fadeInUp">
+                <span class="sub-title">Yangi kolleksiya 2026</span>
+                <h2>Tabiiy go'zallik <br> sizning <span>haqingiz</span></h2>
+                <p>O'zingizni erkalang. Bizning mahsulotlarimiz bilan teringiz qayta tug'iladi.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn-primary glow-btn">Hozir sotib olish</a>
+                    <a href="#" class="btn-outline">Video ko'rish</a>
+                </div>
             </div>
         </section>
 
         <section id="products" class="products-section">
-            <h2 class="section-title">Mahsulotlarimiz</h2>
-            <div class="product-grid" id="productGrid">
-                <!-- Mahsulotlar JS orqali qo'shiladi -->
+            <div class="section-header">
+                <h2 class="section-title">Eng ko'p sotilganlar</h2>
+                <p>Mijozlarimiz tanlovi va eng sifatli mahsulotlar</p>
+            </div>
+            <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="offer-banner">
+            <div class="offer-content">
+                <h3>Maxsus chegirma!</h3>
+                <h2>Birinchi xaridingiz uchun -20%</h2>
+                <p>Promo kod: <strong>GLOW2026</strong></p>
+                <button class="btn-primary" style="width: auto;">Kuponni olish</button>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews-section">
+            <h2 class="section-title">Mijozlarimiz nima deydi?</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Juda sifatli ekan, ayniqsa tonal krem tushishi ajoyib! Endi doimiy mijozman."</p>
+                    <h4>- Madina Axmedova</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Yetkazib berish juda tez. Qadoqlanishi esa shunchaki san'at asari!"</p>
+                    <h4>- Laylo Karimova</h4>
+                </div>
             </div>
         </section>
     </main>
@@ -57,8 +88,41 @@
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Glow Beauty. Barcha huquqlar himoyalangan.</p>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Brand qismi -->
+            <div class="footer-col">
+                <h2 class="logo">Glow Beauty</h2>
+                <p>Sizning go'zalligingiz - bizning maqsadimiz. Eng yaxshi kosmetika mahsulotlari faqat bizda.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <!-- Havolalar -->
+            <div class="footer-col">
+                <h3>Sahifalar</h3>
+                <ul>
+                    <li><a href="#home">Asosiy</a></li>
+                    <li><a href="#products">Mahsulotlar</a></li>
+                    <li><a href="#about">Biz haqimizda</a></li>
+                    <li><a href="#">Yetkazib berish</a></li>
+                </ul>
+            </div>
+
+            <!-- Aloqa -->
+            <div class="footer-col">
+                <h3>Bog'lanish</h3>
+                <p><i class="fas fa-phone"></i> +998 90 123 45 67</p>
+                <p><i class="fas fa-envelope"></i> info@glowbeauty.uz</p>
+                <p><i class="fas fa-map-marker-alt"></i> Toshkent sh., Chilonzor tumani</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Glow Beauty. Barcha huquqlar himoyalangan.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
